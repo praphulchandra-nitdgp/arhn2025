@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+
+.hero{
+  background-image: url('./img/Aarohan\ Website\ Image\ 6.png');
+  background-position: center;
+  background-size: cover;
+}
+.quote{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: aliceblue;
+  background-color: black;
+  /* background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(108, 107, 107) 50%, rgba(0,0,0,1) 100%); */
+  height: 20vh;
+}
