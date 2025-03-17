@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 .hero{
   background-image: url('./img/Aarohan\ Website\ Image\ 6.png');
@@ -16,3 +16,203 @@
   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(108, 107, 107) 50%, rgba(0,0,0,1) 100%); */
   height: 20vh;
 }
+.aarohan{
+  margin-top: -6.5rem;
+}
+
+.hero-typography {
+  width: 80%;
+  min-width: fit-content;
+  margin-top: 30rem;
+
+  padding: 22px 30px;
+  background-color: rgb(237, 236, 236);
+  border-radius: 20px; 
+  overflow: wrap;
+  opacity: 0.9;
+}
+
+.imagine span {
+  background-color: #340406;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(242, 243, 226);
+  border-radius: 15px;
+  padding: 10px 7px;
+  margin-right: 30px;
+}
+
+/* ------------------- Typewriter Effect -------------------- */
+.typewriter {
+  text-align: left; /* Align text to the left */
+}
+
+.typewriter h1 {
+  color: #340406;
+  font-family: monospace;
+  font-size: 27px;
+  text-align: left; /* Ensure text is left-aligned */
+  overflow: hidden;
+  border-right: .15em solid #fff;
+  white-space: nowrap;
+  margin: 0; /* Remove auto margin */
+  letter-spacing: .05em;
+  animation:
+    typing 6s steps(60, end),
+    blink-caret 1s step-end infinite;
+}
+
+.typewriter .type21, 
+.typewriter .type22 {
+  display: none;
+}
+
+/* Typing Effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking Cursor Effect */
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #fff;
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes hideCaret {
+  to {
+    border-right: none;
+  }
+}
+
+
+
+@media (max-width: 1300px){
+  .aarohan{
+    margin-top: -6.5rem;
+  }
+  .hero-typography{
+    margin-top: 30rem;
+
+    padding: 17px 24px;
+  }
+  .imagine span{
+    font-size: 1.2rem;
+    margin-right: 20px;
+  }
+  .typewriter h1{
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .aarohan img{
+    width: 900px;
+  }
+
+  .hero-typography{
+    margin-top: 30rem;
+
+    padding: 17px 24px;
+  }
+  .imagine span{
+    font-size: 1.2rem;
+    margin-right: 20px;
+  }
+  .typewriter h1{
+    font-size: 22px;
+  }
+  .typewriter h1 {
+    display: none;
+  }
+  
+  .typewriter .type21 {
+    display: block;
+    animation:
+      typing 3s steps(60, end),
+      blink-caret .5s step-end forwards;
+    animation-delay: 0.5s;
+  }
+  .typewriter .type21::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    animation: hideCaret 0s infinite;
+    animation-delay: 3.5s;
+  }
+
+  .typewriter .type22 {
+    display: block;
+    opacity: 0; /* Initially hidden */
+    animation:
+      fadeIn 0.1s forwards, /* Fade in effect */
+      typing 3s steps(60, end),
+      blink-caret .5s step-end forwards;
+    animation-delay: 3.5s; /* Appears after 3.5s */
+  }
+}
+
+
+@media (max-width: 740px) {
+  .hero-container{
+    width: 100%;
+    
+  }
+  .aarohan img{
+    width: 90vw;
+  }
+
+  .hero-typography{
+    width: fit-content;
+
+  }
+  .imagine span{
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  .typewriter h1{
+    font-size: 18px;
+    letter-spacing: 0.25;
+  }
+
+}
+@media (max-width: 640px){
+  .hero-container{
+    margin-top: 40vh;
+    padding: 20vh 0;
+  }
+  .details h2 img{
+    width: 20vw;
+  }
+  .hero-typography{
+    width: 70vw;
+    padding: 8px 5px;
+    border-radius: 20px;
+  }
+  .typewriter h1{
+    font-size: 0.8rem;
+  }
+  .imagine span {
+    font-size: 0.7rem;
+    
+    padding: 10px 7px;
+    margin-right: 10px;
+  }
+  
+}
+
+

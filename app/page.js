@@ -14,17 +14,6 @@ const navigation = [
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-
-  // Handle scroll event
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <>
@@ -79,52 +68,36 @@ export default function Home() {
         </header>
 
         {/* Hero Section */}
-        <div className="mx-auto mt-80 mb-0 max-w-2xl sm:py-48 lg:py-56 text-center w-full">
+        <div className="hero-container mx-auto mt-80 mb-0 max-w-2xl sm:py-48 lg:py-56 text-center w-full">
           {/* Scroll Effect on AAROHAN Heading */}
           <h1
-            className="aarohan transition-all duration-300 ease-in-out"
-            style={{
-              transform: `translateY(${Math.max(-scrollY * 0.5, -100)}px) scale(${Math.min(1.5, 1 + scrollY * 0.002)})`,
-            }}
-          >
+            className="aarohan flex items-center justify-center">
             <img 
-              src="https://see.fontimg.com/api/rf5/yV5d/YjI2MjBlNjJiMWZhNDdjN2I3ZDUxN2RiYmI3MzY1NDMub3Rm/QUFST0hBTg/rocket-rinder.png?r=fs&h=130&w=2000&fg=DC7D00&bg=FFFFFF&tb=1&s=65" 
+              src="https://see.fontimg.com/api/rf5/yV5d/YjI2MjBlNjJiMWZhNDdjN2I3ZDUxN2RiYmI3MzY1NDMub3Rm/QUFST0hBTg/rocket-rinder.png?r=fs&h=200&w=2000&fg=DC7D00&bg=FFFFFF&tb=1&s=65" 
               alt="AAROHAN"
             />
           </h1>
 
           {/* Additional Elements */}
-          <div className="relative mt-1 flex items-center justify-between gap-x-63">
-            <p className="absolute px-4 py-2.5 text-sm font-semibold h-10 w-60 top-0 left-0">
-              <img src="https://see.fontimg.com/api/rf5/yV5d/YjI2MjBlNjJiMWZhNDdjN2I3ZDUxN2RiYmI3MzY1NDMub3Rm/TUFSQ0ggMjAtMjM/rocket-rinder.png?r=fs&h=130&w=2000&fg=DC7D00&bg=FFFFFF&tb=1&s=65" alt="80s fonts"/>
-            </p>
-            <p className="absolute px-4 py-2.5 text-sm font-semibold h-10 w-60 top-0 right-0">
-              <img src="https://see.fontimg.com/api/rf5/yV5d/YjI2MjBlNjJiMWZhNDdjN2I3ZDUxN2RiYmI3MzY1NDMub3Rm/TE9SRFMgQVJFTkE/rocket-rinder.png?r=fs&h=130&w=2000&fg=DC7D00&bg=FFFFFF&tb=1&s=65" alt="80s fonts"/>
-            </p>
+          <div className="details relative mt-1 flex items-center justify-around">
+            <h2 className="absolute px-4 py-2.5 text-sm font-semibold h-10 top-0 left-0 flex justify-center">
+              <img src="https://see.fontimg.com/api/rf5/yV5d/YjI2MjBlNjJiMWZhNDdjN2I3ZDUxN2RiYmI3MzY1NDMub3Rm/TUFSQ0ggMjAtMjM/rocket-rinder.png?r=fs&h=130&w=2000&fg=DC7D00&bg=FFFFFF&tb=1&s=65" alt="date"/>
+            </h2>
+            <h2 className="absolute px-4 py-2.5 text-sm font-semibold h-10 top-0 right-0 flex justify-center">
+              <img src="https://see.fontimg.com/api/rf5/yV5d/YjI2MjBlNjJiMWZhNDdjN2I3ZDUxN2RiYmI3MzY1NDMub3Rm/TE9SRFMgQVJFTkE/rocket-rinder.png?r=fs&h=130&w=2000&fg=DC7D00&bg=FFFFFF&tb=1&s=65" alt="venue"/>
+            </h2>
+            <div className="absolute hero-typography flex justify-center items-center mx-auto"> 
+              <div className="imagine flex justify-center items-center">
+                <span><p>/imagine:</p></span>
+              </div>
+              <div className="typewriter">
+                <h1>Technology meets Tradition, Innovation meets Inspiration.</h1>
+                <h1 className="type21">Technology meets Tradition,</h1>
+                <h1 className="type22">                Innovation meets Inspiration.</h1>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      {/* Quote Section */}
-      <div className="flex relative">
-        <div className="quote text-gray-900 flex text-center justify-center flex-col">
-          <p className="text-center text-2xl font-semibold">
-            Tech meets Tradition, and Innovation meets Inspiration
-          </p>
-          <div className="flex justify-around text-center mt-10">
-                <div className="subquote">
-                  <h1>5000+</h1>
-                  <p>Attendees</p>
-                </div>
-                <div className="subquote">
-                  <h1>50+</h1>
-                  <p>Events</p>
-                </div>
-                <div className="subquote">
-                  <h1>4</h1>
-                  <p>Days</p>
-                </div>
-          </div>
+          
         </div>
       </div>
 
